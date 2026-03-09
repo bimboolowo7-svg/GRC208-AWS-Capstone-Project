@@ -4,6 +4,75 @@
 
 The AWS Integrated GRC Platform is a comprehensive Governance, Risk, and Compliance solution designed for GRC208 students. This capstone project demonstrates how to build, deploy, and manage an enterprise-grade GRC platform using Amazon Web Services (AWS) and industry best practices.
 
+---
+
+## Before You Begin — Setting Up Your AWS Account
+
+> **Important:** Every student must have an active AWS account before starting this project. Follow the steps below to get started for FREE.
+
+### Step 1: Create a Free AWS Account
+
+Go to [https://aws.amazon.com/free](https://aws.amazon.com/free) and click **Create a Free Account**. You will need:
+
+- A valid email address
+- A phone number for verification
+- A credit or debit card (for identity verification only — you will NOT be charged if you stay within Free Tier limits)
+
+Once registered, you automatically receive **12 months of AWS Free Tier** access, which covers everything needed for this project at **zero cost**.
+
+### Step 2: Claim Your Free Student Credits
+
+AWS offers multiple free credit programmes for students. Choose the one that applies to you:
+
+| Programme | Credits | How to Apply | Best For |
+|-----------|---------|--------------|----------|
+| **AWS Educate** | Free sandbox + labs | [aws.amazon.com/education/awseducate](https://aws.amazon.com/education/awseducate) | All students (no credit card needed) |
+| **AWS Academy** | $50–$100 credits | Ask your instructor if your institution is enrolled | Students at AWS Academy member schools |
+| **AWS Free Tier** | 12 months free | Automatic on new account creation | All new AWS accounts |
+| **AWS Activate** | Up to $1,000 credits | [aws.amazon.com/activate](https://aws.amazon.com/activate) | Students building startup/portfolio projects |
+
+> **Recommended:** Sign up for both **AWS Educate** AND create a **Free Tier account**. Together, they give you more than enough resources to complete this entire capstone project.
+
+### Step 3: What the Free Tier Covers for This Project
+
+This entire capstone project runs comfortably within the AWS Free Tier limits. The table below shows the estimated usage versus what is free:
+
+| AWS Service | Free Tier Allowance | Estimated Project Usage | Cost |
+|-------------|--------------------|-----------------------|------|
+| Amazon RDS MySQL | 750 hours/month | ~100 hours | **FREE** |
+| AWS Lambda | 1,000,000 requests/month | ~10,000 requests | **FREE** |
+| Amazon S3 | 5 GB storage | ~100 MB | **FREE** |
+| Amazon DynamoDB | 25 GB + 25 WCU/RCU | Minimal | **FREE** |
+| AWS CloudTrail | First trail free | 1 trail | **FREE** |
+| Amazon CloudWatch | 10 custom metrics | Basic metrics | **FREE** |
+| AWS Config | 1–2 rules | ~5 rules ($0.003/rule) | **~$0.01** |
+| **Total Estimated Cost** | | | **$0 – $5/month** |
+
+### Step 4: Set a Billing Alert (Mandatory)
+
+Before deploying anything, set up a billing alert to avoid unexpected charges:
+
+1. Log in to the [AWS Console](https://console.aws.amazon.com)
+2. Go to **Billing Dashboard** > **Budgets** > **Create Budget**
+3. Select **Cost Budget** and set the amount to **$10**
+4. Add your email address to receive alerts
+5. Click **Create Budget**
+
+This ensures you will be notified immediately if costs ever approach $10, giving you time to review and clean up resources.
+
+### Step 5: Enable MFA on Your Root Account
+
+This is a security best practice and a GRC requirement:
+
+1. Go to **IAM** > **Security credentials** in the AWS Console
+2. Under **Multi-factor authentication (MFA)**, click **Assign MFA device**
+3. Use an authenticator app (Google Authenticator or Authy)
+4. Follow the on-screen steps to complete setup
+
+> **Never use your root account for day-to-day work.** Create an IAM user with admin permissions for all project activities.
+
+---
+
 ## Project Objectives
 
 Students completing this capstone will learn to:
